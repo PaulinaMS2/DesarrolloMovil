@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_3/views/layouts/container_2.dart';
+import 'package:flutter_application_3/views/widgets/imagen.dart';
 import 'package:flutter_application_3/views/layouts/rows.dart';
-import 'package:flutter_application_3/views/widgets/icons.dart';
-
+import 'package:flutter_application_3/views/widgets/texto.dart';
 void main() {
   runApp(const MainApp());
 }
@@ -14,7 +13,15 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return  MaterialApp(
       home: Scaffold(
-        body: createIcons()
+        body: Column (
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            crearImagen(),
+            rowTitle(),
+            rowIcons(),
+            textDescription()
+          ],
+        )
       ),
     );
   }
